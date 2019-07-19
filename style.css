@@ -15,7 +15,7 @@
   color: #616161;
 }
 
-/* Regole del contenitore */
+/* Regole del contenitore ----------------------------- */
 .container {
   width: 1200px;
   height: 800px;
@@ -36,12 +36,18 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
+.carousel img {
+  display: none;
+}
+.carousel img.active {
+  display: inline-block;
+}
 
 /* Arrow */
 .prev, .next{
   position:absolute;
   top:50%;
-  transform: translate(-50%, 0);
+  transform: translateY(-50%);
   cursor: pointer;
   font-size: 30px;
   color: #adadad;
