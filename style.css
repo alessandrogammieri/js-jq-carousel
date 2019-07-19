@@ -5,13 +5,8 @@
   box-sizing: border-box;
 }
 
-/* Hover e Focus dot-arrows */
-.prev:hover, .next:hover,
-.dotnav i:hover {
-  color:  #616161;
-}
-.prev:focus, .next:focus,
-.dotnav i:focus {
+/* Hover arrows */
+.prev:hover, .next:hover {
   color: #616161;
 }
 
@@ -38,6 +33,7 @@
 }
 .carousel img {
   display: none;
+  width: 960px;
 }
 .carousel img.active {
   display: inline-block;
@@ -69,4 +65,7 @@
   color: #adadad;
   cursor: pointer;
   font-size: 15px;
+}
+.dotnav i.active {
+  color: #616161;
 }

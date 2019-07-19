@@ -8,14 +8,18 @@ $( document ).ready(function() {
   function nextimg () {
     // Variabile in cui salviamo lo stato di attivazione
     var activeimg = $(".carousel img.active");
+    var activedot = $(".dotnav i.active");
     // Al momento del click rimuoviamo la classe active
     activeimg.removeClass("active");
+    activedot.removeClass("active");
 
     // Fissiamo le condizioni
-    if (activeimg.hasClass("last")) {
-      $(".first").addClass("active");
+    if (activeimg.hasClass("last") && activedot.hasClass("last")) {
+      $("img.first").addClass("active");
+      $(".dotnav i.first").addClass("active");
     } else {
       activeimg.next("img").addClass("active");
+      activedot.next(".dotnav i").addClass("active");
     }
   }
 
@@ -25,14 +29,18 @@ $( document ).ready(function() {
   function previmg () {
     // Variabile in cui salviamo lo stato di attivazione
     var activeimg = $(".carousel img.active");
+    var activedot = $(".dotnav i.active");
     // Al momento del click rimuoviamo la classe active
     activeimg.removeClass("active");
+    activedot.removeClass("active");
 
     // Fissiamo le condizioni
-    if (activeimg.hasClass("first")) {
-      $(".last").addClass("active");
+    if (activeimg.hasClass("first") && activedot.hasClass("first")) {
+      $("img.last").addClass("active");
+      $(".dotnav i.last").addClass("active");
     } else {
       activeimg.prev("img").addClass("active");
+      activedot.prev(".dotnav i").addClass("active");
     }
   }
 
