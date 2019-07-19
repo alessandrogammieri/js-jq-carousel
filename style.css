@@ -4,3 +4,63 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Hover e Focus dot-arrows */
+.prev:hover, .next:hover,
+.dotnav i:hover {
+  color:  #616161;
+}
+.prev:focus, .next:focus,
+.dotnav i:focus {
+  color: #616161;
+}
+
+/* Regole del contenitore */
+.container {
+  width: 1200px;
+  height: 800px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Regole del Carousel Immagini */
+.carousel {
+  width:80%;
+  height:80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Arrow */
+.prev, .next{
+  position:absolute;
+  top:50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  font-size: 30px;
+  color: #adadad;
+}
+.prev {
+  left: -80px;
+}
+.next {
+  right: -80px;
+}
+
+/* Dot Navigation */
+.dotnav {
+  position:absolute;
+  bottom: -50px;
+}
+.dotnav i {
+  padding: 0 10px;
+  color: #adadad;
+  cursor: pointer;
+  font-size: 15px;
+}
